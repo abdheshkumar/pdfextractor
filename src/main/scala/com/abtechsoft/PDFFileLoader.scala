@@ -2,7 +2,7 @@ package com.abtechsoft
 
 import java.nio.file.Files
 
-import com.typesafe.scalalogging.LazyLogging
+//import com.typesafe.scalalogging.LazyLogging
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.util.PDFTextStripper
 
@@ -10,7 +10,7 @@ import scala.util.{Failure, Success, Try}
 
 /** * Created by abdhesh on 1/1/16. */
 
-trait PDFFileLoader extends LazyLogging {
+trait PDFFileLoader /*extends LazyLogging*/ {
 
   val pdfFileName: String
   val pdfStripper: PDFTextStripper
@@ -19,7 +19,7 @@ trait PDFFileLoader extends LazyLogging {
     PDFLocator.locateFile(pdfFileName) match {
       case Some(path) => Files.newInputStream(path)
       case None =>
-        logger.warn("Looking for %s in classpath", pdfFileName)
+        println("Looking for %s in classpath", pdfFileName)
         getClass.getResourceAsStream(s"/$pdfFileName")
     }
 

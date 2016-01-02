@@ -10,7 +10,7 @@ import scala.collection.mutable.StringBuilder
 /** * Created by abdhesh on 1/1/16. */
 
 object PdfHandler extends PDFFileLoader {
-  lazy val pdfFileName = "src/links.pdf"
+  lazy val pdfFileName = "src/AnandSingh.pdf"
   val pdfStripper = new PrintTextLocations()
 
   def main(args: Array[String]) = {
