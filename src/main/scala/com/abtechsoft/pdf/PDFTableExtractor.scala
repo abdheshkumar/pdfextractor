@@ -1,4 +1,3 @@
-
 package com.abtechsoft.pdf
 
 import java.io.{File, FileInputStream, InputStream}
@@ -10,6 +9,7 @@ import org.apache.pdfbox.util.{PDFTextStripper, TextPosition}
 import org.slf4j.LoggerFactory
 //remove if not needed
 import scala.collection.JavaConversions._
+import com.abtechsoft.pdf.entity._
 
 object PDFTableExtractor {
 
